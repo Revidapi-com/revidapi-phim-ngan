@@ -5,7 +5,7 @@ Mã nguồn phát hành theo giấy phép MIT. Phông EB Garamond theo SIL Open 
 ```
 MIT License
 
-Copyright (c) 2026 RevidAPI và các tác giả gốc
+Copyright (c) 2026 RevidAPI
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

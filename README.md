@@ -59,6 +59,35 @@ phong-cach-khac-go/     bộ dựng khắc gỗ
 demo/                   hai video mẫu
 ```
 
+## Chạy trên VPS / tự động hoá
+
+Mọi bước đều chạy không cần màn hình, nên dùng được trên VPS Linux (Ubuntu 22.04+), cron hay n8n. Giọng đọc luôn gọi API RevidAPI.
+
+Cài một lần trên Ubuntu:
+
+```bash
+sudo apt update && sudo apt install -y ffmpeg python3-numpy git curl
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt install -y nodejs
+git clone https://github.com/Revidapi-com/revidapi-phim-ngan.git && cd revidapi-phim-ngan
+npx -y playwright-core install-deps chromium
+```
+
+Khoá đặt qua biến môi trường thay cho file (hợp với cron/n8n):
+
+```bash
+REVIDAPI_KEY=sk_... ./dung.sh 3d kich-ban-moi.txt
+```
+
+Ví dụ cron dựng mỗi sáng 6 giờ từ file kịch bản:
+
+```cron
+0 6 * * * cd ~/revidapi-phim-ngan && REVIDAPI_KEY=sk_... ./dung.sh khac-go hom-nay.txt >> dung.log 2>&1
+```
+
+Trong n8n: dùng node **Execute Command** chạy đúng lệnh trên, rồi lấy file ở `ket-qua/`.
+
+Lưu ý: VPS nên có từ 4 GB RAM; phong cách 3D render bằng CPU sẽ chậm hơn máy có GPU (vài phút đến vài chục phút).
+
 ## Giấy phép
 
 Xem [GIAY-PHEP.md](GIAY-PHEP.md).
