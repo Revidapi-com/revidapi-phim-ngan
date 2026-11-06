@@ -7,6 +7,16 @@ Dựng phim dọc 9:16 (1080×1920, ~60 giây) từ một file kịch bản. Có
 | **3D hoạt hình** low-poly, nét mực | [demo/quang-trung-3d.mp4](demo/quang-trung-3d.mp4) | Remotion + three.js |
 | **Khắc gỗ** tranh in đen đỏ | [demo/quang-trung-khac-go.mp4](demo/quang-trung-khac-go.mp4) | three.js + trình duyệt không giao diện |
 
+## Xem trước
+
+**Phong cách 3D**
+
+![Phong cách 3D](demo/anh/quang-trung-3d.jpg)
+
+**Phong cách khắc gỗ**
+
+![Phong cách khắc gỗ](demo/anh/quang-trung-khac-go.jpg)
+
 ## Yêu cầu
 
 - Node.js ≥ 20, Python 3 + `numpy` (`python3 -m pip install numpy`), `ffmpeg` (macOS: `brew install ffmpeg`)
