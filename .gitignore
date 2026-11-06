@@ -1,0 +1,5 @@
+node_modules/
+ket-qua/
+out/
+.DS_Store
+*.lock
